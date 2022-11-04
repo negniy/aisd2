@@ -1,0 +1,352 @@
+#include "bin_image.h"
+#include "stdio.h"
+#include <stdlib.h>
+#include <string>
+#include <ctype.h>
+#include <math.h>
+#include <locale.h>
+#include <windows.h>
+#include <conio.h>
+#include <time.h>
+#include <iostream>
+#include "errors.h"
+
+
+int get_key()
+{
+	int key = _getch();
+	if ((key == 0) || (key == 224)) key = _getch();
+	return key;
+};
+
+int menu_1()
+{
+	std::cout << "Выберите, как вы хотите продолжить работу:\n";
+	std::cout << "Инвертировать изображение: Enter\nСложить с другим изображением: 1\nУмножить на другое изображение: 2\nСложить с булевским значением: 3\nУмножить на булевское значение: 4\nВычислить коэффициент заполнения изображения: 5\nВыход из прог-мы: Esc\n";
+	while (true)
+	{
+		int key = get_key();
+		if ((key == 13) || (key == 49) || (key == 50) || (key == 51) || (key == 52) || (key == 53) || (key == 27)) return key;
+	}
+}
+
+int menu_2()
+{
+	std::cout << "Вернуться: Enter\nВыход из прог-мы: Esc\n";
+	while (true)
+	{
+		int key = get_key();
+		if ((key == 13) || (key == 27)) return key;
+	}
+}
+
+int check() {
+	int number = 0;
+	while (number <= 0)
+	{
+		while (!(std::cin >> number) || (std::cin.peek() != '\n'))
+		{
+			std::cin.clear();
+			while (std::cin.get() != '\n');
+			std::cout << "Некорректное значение, повторите ввод\n";
+		}
+		if (number <= 0) std::cout << "Некорректное значение, повторите ввод\n";
+
+	}
+
+	return number;
+}
+
+bool check_bool() {
+	bool number = FALSE;
+	while (number <= 0)
+	{
+		while (!(std::cin >> number) || (std::cin.peek() != '\n'))
+		{
+			std::cin.clear();
+			while (std::cin.get() != '\n');
+			std::cout << "Некорректное значение, повторите ввод\n";
+		}
+		if (number <= 0) std::cout << "Некорректное значение, повторите ввод\n";
+
+	}
+
+	return number;
+}
+
+double check_double() {
+	double number = 0;
+	while (number <= 0)
+	{
+		while (!(std::cin >> number) || (std::cin.peek() != '\n'))
+		{
+			std::cin.clear();
+			while (std::cin.get() != '\n');
+			std::cout << "Некорректное значение, повторите ввод\n";
+		}
+		if (number <= 0) std::cout << "Некорректное значение, повторите ввод\n";
+
+	}
+
+	return number;
+}
+template<typename type>
+bin_image<type> create_image() {
+	std::cout << "\nВведите размеры изображения(длина, ширина)\n";
+	int length, width;
+	length = check();
+	width = check();
+	try {
+		bin_image<type> A(length, width);
+		return A;
+	}
+	catch (error programm_error) {
+		programm_error.print();
+		while (true) {
+			std::cout << "\nВведите размеры изображения(длина, ширина)\n";
+			length = check();
+			width = check();
+			try {
+				bin_image<type> A(length, width);
+				return A;
+			}
+			catch (error programm_error) {
+				programm_error.print();
+			}
+		}
+	}
+}
+template<typename type>
+void create_circle(double radios, int x, int y, bin_image<type>& A) {
+	if (radios < 0) { throw error("Invalid radios value"); }
+	for (int j = 0; j < A.get_width(); j++) { // проверка за выход за границы по вертикали
+		int i = -1;
+		double a = sqrt((x - i) * (x - i) + (y - j) * (y - j));
+		if (a <= radios) { throw error("Going beyond the boundaries of the image"); }
+		i = A.get_length();
+		a = sqrt((x - i) * (x - i) + (y - j) * (y - j));
+		if (a <= radios) { throw error("Going beyond the boundaries of the image"); }
+	}
+
+	for (int j = 0; j < A.get_length(); j++) { // проверка за выход за границы по горизонтали
+		int i = -1;
+		double a = sqrt((x - i) * (x - i) + (y - j) * (y - j));
+		if (a <= radios) { throw error("Going beyond the boundaries of the image"); }
+		i = A.get_width();
+		a = sqrt((x - i) * (x - i) + (y - j) * (y - j));
+		if (a <= radios) { throw error("Going beyond the boundaries of the image"); }
+	}
+
+	int center_x = A.get_length() / 2;
+	int center_y = A.get_width() / 2;
+	x = x + center_x;
+	y = center_y - y;
+	for (int i = 0; i < A.get_length(); i++) {
+		for (int j = 0; j < A.get_width(); j++) {
+			bool& item = A(i, j);
+			double a = sqrt((y - i) * (y - i) + (x - j) * (x - j));
+			if (a <= radios) {
+				item = true;
+			}
+			else { item = false; }
+		}
+	}
+	if (A.fill_factor() == 0) throw error("Empty image");
+}
+
+template<typename type>
+int main() {
+	char a = '0';
+	while (true) {
+		if(a==false){ std::cout << "\nЭто программа по работе с бинарными изображениями окружности\n"; }
+	}
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
+	setlocale(LC_ALL, "RUS");
+	while (true) {
+		system("cls");
+		std::cout << "\nЭто программа по работе с бинарными изображениями окружности\n";
+		bin_image<bool> A = create_image();
+		std::cout << "\nВведите радиус и координаты центра(х,у) окружности\n";
+		double R = check_double();
+		int x = check(); int y = check();
+		std::cin >> R >> x >> y;
+		try {
+			create_circle(R, x, y, A);
+		}
+		catch (error programm_error) {
+			programm_error.print();
+			while (true) {
+				std::cout << "Некорректные координаты центра или радиус введите еще раз: R (х,у)\n";
+				R = check_double();
+				x = check(); y = check();
+				try {
+					create_circle(R, x, y, A);
+					break;
+				}
+				catch (error programm_error) {
+					programm_error.print();
+				}
+			}
+		}
+		while (true) {
+			std::cin.clear();
+			system("cls");
+			std::cout << A;
+			std::cout << "\nОкружность радиуса R=" << R << " с центром в точке О" << "(" << x << ";" << y << ")\n";
+			int m1 = menu_1();
+			//выход из программы
+			if (m1 == 27) return 0;
+			//интвертировать
+			if (m1 == 13) {
+				A = !A;
+				while (true) {
+					system("cls");
+					std::cout << "Инвертированное изображение:\n";
+					std::cout << A;
+					int m2 = menu_2();
+					if (m2 == 27) return 0;
+					if (m2 == 13) {
+						A = !A;
+						break;
+					}
+				}
+			}
+			// коэф заполнения
+			if (m1 == 53) {
+				while (true) {
+					system("cls");
+					std::cout << "Коэффициент заполнения = " << A.fill_factor() << "\n";
+					int m2 = menu_2();
+					if (m2 == 27) return 0;
+					if (m2 == 13) {
+						break;
+					}
+				}
+			}
+			// сложить с изобр
+			if (m1 == 49) {
+				bin_image<type> B = create_image();
+				std::cout << "\nВведите радиус и координаты центра(х,у) окружности\n";
+				double R2 = check_double();
+				int x2 = check(); int y2 = check();
+				try {
+					create_circle(R2, x2, y2, B);
+				}
+				catch (error programm_error) {
+					programm_error.print();
+					while (true) {
+						std::cout << "Некорректные координаты центра или радиус введите еще раз: R (х,у)\n";
+						R2 = check_double();
+						x2 = check(); y2 = check();
+						try {
+							create_circle(R2, x2, y2, B);
+							break;
+						}
+						catch (error programm_error) {
+							programm_error.print();
+						}
+					}
+				}
+				try {
+					bin_image C = A + B;
+					while (true) {
+						system("cls");
+						std::cout << "Полученное изображение\n";
+						std::cout << C;
+						int m2 = menu_2();
+						if (m2 == 27) return 0;
+						if (m2 == 13) break;
+					}
+				}
+				catch (error programm_error) {
+					programm_error.print();
+					while (true) {
+						system("cls");
+						std::cout << "Невозвожно сложить 2 изображения\n";
+						int m3 = menu_2();
+						if (m3 == 27) return 0;
+						if (m3 == 13) break;
+					}
+				}
+			}
+			//умножить на изобр
+			if (m1 == 50) {
+				bin_image<type> B = create_image();
+				std::cout << "\nВведите радиус и координаты центра(х,у) окружности\n";
+				double R2 = check_double();
+				int x2 = check(); int y2 = check();
+				try {
+					create_circle(R2, x2, y2, B);
+				}
+				catch (error programm_error) {
+					programm_error.print();
+					while (true) {
+						std::cout << "Некорректные координаты центра или радиус введите еще раз: R (х,у)\n";
+						R2 = check_double();
+						x2 = check(); y2 = check();
+						try {
+							create_circle(R2, x2, y2, B);
+							break;
+						}
+						catch (error programm_error) {
+							programm_error.print();
+						}
+					}
+				}
+				try {
+					bin_image C = A * B;
+					while (true) {
+						system("cls");
+						std::cout << "Полученное изображение\n";
+						std::cout << C;
+						int m2 = menu_2();
+						if (m2 == 27) return 0;
+						if (m2 == 13) break;
+					}
+				}
+				catch (error programm_error) {
+					programm_error.print();
+					while (true) {
+						system("cls");
+						std::cout << "Невозвожно умножить 2 изображения\n";
+						int m3 = menu_2();
+						if (m3 == 27) return 0;
+						if (m3 == 13) break;
+					}
+				}
+			}
+			// сложить с булевским
+			if (m1 == 51) {
+				system("cls");
+				std::cout << "Введите булевское значение:\n";
+				bool n = check_bool();
+				bin_image tmp = A + n;
+				while (true) {
+					system("cls");
+					std::cout << "Полученное изображение:\n";
+					std::cout << tmp;
+					int m2 = menu_2();
+					if (m2 == 27) return 0;
+					if (m2 == 13) break;
+				}
+			}
+			// умножить на булевское
+			if (m1 == 52) {
+				system("cls");
+				std::cout << "Введите булевское значение:\n";
+				bool n = check_bool();
+				bin_image tmp = n * A;
+				while (true) {
+					system("cls");
+					std::cout << "Полученное изображение:\n";
+					std::cout << tmp;
+					int m2 = menu_2();
+					if (m2 == 27) return 0;
+					if (m2 == 13) break;
+				}
+			}
+		}
+	}
+	return 0;
+}
