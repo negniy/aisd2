@@ -155,24 +155,20 @@ void create_circle(double radios, int x, int y, bin_image<type>& A) {
 }
 
 template<typename type>
-int main() {
-	char a = '0';
-	while (true) {
-		if(a==false){ std::cout << "\nЁто программа по работе с бинарными изображени€ми окружности\n"; }
-	}
+int main_type() {
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
 	setlocale(LC_ALL, "RUS");
 	while (true) {
 		system("cls");
 		std::cout << "\nЁто программа по работе с бинарными изображени€ми окружности\n";
-		bin_image<bool> A = create_image();
+		bin_image A<type> = create_image<type>();
 		std::cout << "\n¬ведите радиус и координаты центра(х,у) окружности\n";
 		double R = check_double();
 		int x = check(); int y = check();
 		std::cin >> R >> x >> y;
 		try {
-			create_circle(R, x, y, A);
+			create_circle<type>(R, x, y, A<type>);
 		}
 		catch (error programm_error) {
 			programm_error.print();
@@ -181,7 +177,7 @@ int main() {
 				R = check_double();
 				x = check(); y = check();
 				try {
-					create_circle(R, x, y, A);
+					create_circle<type>(R, x, y, A<type>);
 					break;
 				}
 				catch (error programm_error) {
@@ -199,11 +195,11 @@ int main() {
 			if (m1 == 27) return 0;
 			//интвертировать
 			if (m1 == 13) {
-				A = !A;
+				A<type> = !A<type>;
 				while (true) {
 					system("cls");
 					std::cout << "»нвертированное изображение:\n";
-					std::cout << A;
+					std::cout << A<type>;
 					int m2 = menu_2();
 					if (m2 == 27) return 0;
 					if (m2 == 13) {
@@ -226,7 +222,7 @@ int main() {
 			}
 			// сложить с изобр
 			if (m1 == 49) {
-				bin_image<type> B = create_image();
+				bin_image B = create_image();
 				std::cout << "\n¬ведите радиус и координаты центра(х,у) окружности\n";
 				double R2 = check_double();
 				int x2 = check(); int y2 = check();
@@ -349,4 +345,40 @@ int main() {
 		}
 	}
 	return 0;
+}
+
+int main() {
+	{
+		while (true) {
+			std::cout << "Choose type:";
+			std::cout << "[1] - short";
+			std::cout << "[2] - float";
+			std::cout << "[3] - bool";
+			std::cout << "[4] - char" ;
+			std::cout << "[ESC] - Exit";
+
+			int m = get_key();
+
+			switch (m)
+			{
+			case 49:
+				main_type<short>();
+				break;
+			case 50:
+				main_type<float>();
+				break;
+			case 51:
+				main_type<bool>();
+				break;
+			case 52:
+				main_type<char>();
+				break;
+			case 27:
+				return EXIT_SUCCESS;
+			default:
+				system("clear");
+				break;
+			}
+		}
+	}
 }

@@ -38,5 +38,9 @@ public:
 	bin_image& operator !();
 	double fill_factor() const;
 	~bin_image();
-	bin_image(const bin_image<type>& a);
+	bin_image(const bin_image& a);
 };
+template class bin_image<short>;
+template class bin_image<float>;
+template class bin_image<bool>;
+template class bin_image<char>;

@@ -16,7 +16,7 @@ template<typename type>
 bin_image<type>::bin_image(int length, int width) : length(length), width(width)
 {
 	if (length < 1 || width < 1) { throw error("Incorrect length and width calculations"); }
-	data = new bool* [length];
+	data = new <type>* [length];
 	for (int i = 0; i < length; i++) {
 		data[i] = new bool[width];
 	}
@@ -146,7 +146,7 @@ template<typename type>
 bin_image<type>::bin_image(const bin_image& a) {
 	length = a.length;
 	width = a.width;
-	data = new bool* [length];
+	data = new <type>* [length];
 	for (int i = 0; i < length; i++) {
 		data[i] = new bool[width];
 		for (int j = 0; j < width; j++) {
@@ -156,7 +156,7 @@ bin_image<type>::bin_image(const bin_image& a) {
 }
 
 template<typename type>
-std::ostream& operator <<(std::ostream& s, const bin_image<type>& image)
+std::ostream& operator <<(std::ostream& s, const bin_image& image)
 {
 	for (int i = 0; i < image.length; i++) {
 		for (int j = 0; j < image.width; j++) {
@@ -167,4 +167,3 @@ std::ostream& operator <<(std::ostream& s, const bin_image<type>& image)
 	}
 	return s;
 }
-
