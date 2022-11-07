@@ -40,7 +40,3 @@ public:
 	~bin_image();
 	bin_image(const bin_image& a);
 };
-template class bin_image<short>;
-template class bin_image<float>;
-template class bin_image<bool>;
-template class bin_image<char>;

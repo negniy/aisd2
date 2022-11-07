@@ -162,7 +162,7 @@ int main_type() {
 	while (true) {
 		system("cls");
 		std::cout << "\nЁто программа по работе с бинарными изображени€ми окружности\n";
-		bin_image A<type> = create_image<type>();
+		bin_image<type> A = create_image<type>();
 		std::cout << "\n¬ведите радиус и координаты центра(х,у) окружности\n";
 		double R = check_double();
 		int x = check(); int y = check();

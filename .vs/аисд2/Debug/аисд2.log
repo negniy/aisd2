@@ -1,18 +1,6 @@
 ﻿  bin_image.cpp
 C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.h(42,2): error C2953: bin_image: шаблон класса уже определен
 C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.h(21): message : см. объявление "bin_image"
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.h(43,32): error C2990: bin_image: не класс шаблон уже объявлен как класс шаблон
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.h(21): message : см. объявление "bin_image"
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.h(43,32): error C2946: явное создание экземпляра; "bin_image" не является специализацией класса-шаблона
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.h(44,32): error C2990: bin_image: не класс шаблон уже объявлен как класс шаблон
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.h(43): message : см. объявление "bin_image"
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.h(44,32): error C2946: явное создание экземпляра; "bin_image" не является специализацией класса-шаблона
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.h(45,31): error C2990: bin_image: не класс шаблон уже объявлен как класс шаблон
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.h(44): message : см. объявление "bin_image"
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.h(45,31): error C2946: явное создание экземпляра; "bin_image" не является специализацией класса-шаблона
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.h(46,31): error C2990: bin_image: не класс шаблон уже объявлен как класс шаблон
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.h(45): message : см. объявление "bin_image"
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.h(46,31): error C2946: явное создание экземпляра; "bin_image" не является специализацией класса-шаблона
 C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.cpp(5,1): error C2244: bin_image::get_length: не удается сопоставить определение функции существующему объявлению
 C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.cpp(4): message : см. объявление "bin_image::get_length"
 C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.cpp(5,1): message : определение
@@ -63,105 +51,12 @@ C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.cpp(146,1): message : 
 C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.cpp(146,1): message : существующие объявления
 C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.cpp(146,1): message : 'bin_image<type>::bin_image(const bin_image<type> &)'
 C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.cpp(146,1): message : 'bin_image<type>::bin_image(int,int)'
-  errors.cpp
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.h(43): warning C4661: int bin_image<short>::get_length(void) const: отсутствует подходящее определение для запроса на явное создание экземпляра шаблона
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.h(34): message : см. объявление "bin_image<short>::get_length"
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.h(43): warning C4661: int bin_image<short>::get_width(void) const: отсутствует подходящее определение для запроса на явное создание экземпляра шаблона
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.h(35): message : см. объявление "bin_image<short>::get_width"
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.h(43): warning C4661: bin_image<short>::bin_image(const bin_image<short> &): отсутствует подходящее определение для запроса на явное создание экземпляра шаблона
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.h(41): message : см. объявление "bin_image<short>::bin_image"
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.h(43): warning C4661: bin_image<short>::bin_image(int,int): отсутствует подходящее определение для запроса на явное создание экземпляра шаблона
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.h(36): message : см. объявление "bin_image<short>::bin_image"
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.h(43): warning C4661: type &bin_image<type>::operator ()(int,int) const: отсутствует подходящее определение для запроса на явное создание экземпляра шаблона
-          with
-          [
-              type=short
-          ]
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.h(37): message : см. объявление "bin_image<short>::operator ()"
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.h(43): warning C4661: bin_image<short> &bin_image<short>::operator !(void): отсутствует подходящее определение для запроса на явное создание экземпляра шаблона
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.h(38): message : см. объявление "bin_image<short>::operator !"
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.h(43): warning C4661: double bin_image<short>::fill_factor(void) const: отсутствует подходящее определение для запроса на явное создание экземпляра шаблона
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.h(39): message : см. объявление "bin_image<short>::fill_factor"
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.h(43): warning C4661: bin_image<short>::~bin_image(void): отсутствует подходящее определение для запроса на явное создание экземпляра шаблона
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.h(40): message : см. объявление "bin_image<short>::~bin_image"
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.h(44): warning C4661: int bin_image<float>::get_length(void) const: отсутствует подходящее определение для запроса на явное создание экземпляра шаблона
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.h(34): message : см. объявление "bin_image<float>::get_length"
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.h(44): warning C4661: int bin_image<float>::get_width(void) const: отсутствует подходящее определение для запроса на явное создание экземпляра шаблона
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.h(35): message : см. объявление "bin_image<float>::get_width"
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.h(44): warning C4661: bin_image<float>::bin_image(const bin_image<float> &): отсутствует подходящее определение для запроса на явное создание экземпляра шаблона
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.h(41): message : см. объявление "bin_image<float>::bin_image"
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.h(44): warning C4661: bin_image<float>::bin_image(int,int): отсутствует подходящее определение для запроса на явное создание экземпляра шаблона
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.h(36): message : см. объявление "bin_image<float>::bin_image"
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.h(44): warning C4661: type &bin_image<type>::operator ()(int,int) const: отсутствует подходящее определение для запроса на явное создание экземпляра шаблона
-          with
-          [
-              type=float
-          ]
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.h(37): message : см. объявление "bin_image<float>::operator ()"
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.h(44): warning C4661: bin_image<float> &bin_image<float>::operator !(void): отсутствует подходящее определение для запроса на явное создание экземпляра шаблона
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.h(38): message : см. объявление "bin_image<float>::operator !"
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.h(44): warning C4661: double bin_image<float>::fill_factor(void) const: отсутствует подходящее определение для запроса на явное создание экземпляра шаблона
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.h(39): message : см. объявление "bin_image<float>::fill_factor"
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.h(44): warning C4661: bin_image<float>::~bin_image(void): отсутствует подходящее определение для запроса на явное создание экземпляра шаблона
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.h(40): message : см. объявление "bin_image<float>::~bin_image"
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.h(45): warning C4661: int bin_image<bool>::get_length(void) const: отсутствует подходящее определение для запроса на явное создание экземпляра шаблона
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.h(34): message : см. объявление "bin_image<bool>::get_length"
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.h(45): warning C4661: int bin_image<bool>::get_width(void) const: отсутствует подходящее определение для запроса на явное создание экземпляра шаблона
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.h(35): message : см. объявление "bin_image<bool>::get_width"
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.h(45): warning C4661: bin_image<bool>::bin_image(const bin_image<bool> &): отсутствует подходящее определение для запроса на явное создание экземпляра шаблона
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.h(41): message : см. объявление "bin_image<bool>::bin_image"
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.h(45): warning C4661: bin_image<bool>::bin_image(int,int): отсутствует подходящее определение для запроса на явное создание экземпляра шаблона
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.h(36): message : см. объявление "bin_image<bool>::bin_image"
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.h(45): warning C4661: type &bin_image<type>::operator ()(int,int) const: отсутствует подходящее определение для запроса на явное создание экземпляра шаблона
-          with
-          [
-              type=bool
-          ]
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.h(37): message : см. объявление "bin_image<bool>::operator ()"
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.h(45): warning C4661: bin_image<bool> &bin_image<bool>::operator !(void): отсутствует подходящее определение для запроса на явное создание экземпляра шаблона
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.h(38): message : см. объявление "bin_image<bool>::operator !"
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.h(45): warning C4661: double bin_image<bool>::fill_factor(void) const: отсутствует подходящее определение для запроса на явное создание экземпляра шаблона
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.h(39): message : см. объявление "bin_image<bool>::fill_factor"
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.h(45): warning C4661: bin_image<bool>::~bin_image(void): отсутствует подходящее определение для запроса на явное создание экземпляра шаблона
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.h(40): message : см. объявление "bin_image<bool>::~bin_image"
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.h(46): warning C4661: int bin_image<char>::get_length(void) const: отсутствует подходящее определение для запроса на явное создание экземпляра шаблона
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.h(34): message : см. объявление "bin_image<char>::get_length"
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.h(46): warning C4661: int bin_image<char>::get_width(void) const: отсутствует подходящее определение для запроса на явное создание экземпляра шаблона
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.h(35): message : см. объявление "bin_image<char>::get_width"
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.h(46): warning C4661: bin_image<char>::bin_image(const bin_image<char> &): отсутствует подходящее определение для запроса на явное создание экземпляра шаблона
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.h(41): message : см. объявление "bin_image<char>::bin_image"
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.h(46): warning C4661: bin_image<char>::bin_image(int,int): отсутствует подходящее определение для запроса на явное создание экземпляра шаблона
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.h(36): message : см. объявление "bin_image<char>::bin_image"
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.h(46): warning C4661: type &bin_image<type>::operator ()(int,int) const: отсутствует подходящее определение для запроса на явное создание экземпляра шаблона
-          with
-          [
-              type=char
-          ]
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.h(37): message : см. объявление "bin_image<char>::operator ()"
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.h(46): warning C4661: bin_image<char> &bin_image<char>::operator !(void): отсутствует подходящее определение для запроса на явное создание экземпляра шаблона
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.h(38): message : см. объявление "bin_image<char>::operator !"
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.h(46): warning C4661: double bin_image<char>::fill_factor(void) const: отсутствует подходящее определение для запроса на явное создание экземпляра шаблона
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.h(39): message : см. объявление "bin_image<char>::fill_factor"
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.h(46): warning C4661: bin_image<char>::~bin_image(void): отсутствует подходящее определение для запроса на явное создание экземпляра шаблона
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.h(40): message : см. объявление "bin_image<char>::~bin_image"
   Source.cpp
 C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.h(42,2): error C2953: bin_image: шаблон класса уже определен
 C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.h(21): message : см. объявление "bin_image"
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.h(43,32): error C2990: bin_image: не класс шаблон уже объявлен как класс шаблон
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.h(21): message : см. объявление "bin_image"
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.h(43,32): error C2946: явное создание экземпляра; "bin_image" не является специализацией класса-шаблона
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.h(44,32): error C2990: bin_image: не класс шаблон уже объявлен как класс шаблон
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.h(43): message : см. объявление "bin_image"
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.h(44,32): error C2946: явное создание экземпляра; "bin_image" не является специализацией класса-шаблона
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.h(45,31): error C2990: bin_image: не класс шаблон уже объявлен как класс шаблон
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.h(44): message : см. объявление "bin_image"
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.h(45,31): error C2946: явное создание экземпляра; "bin_image" не является специализацией класса-шаблона
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.h(46,31): error C2990: bin_image: не класс шаблон уже объявлен как класс шаблон
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.h(45): message : см. объявление "bin_image"
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.h(46,31): error C2946: явное создание экземпляра; "bin_image" не является специализацией класса-шаблона
 C:\Users\dstep\source\repos\aisd2\.vs\аисд2\Source.cpp(62,9): warning C4804: <=: небезопасное использование типа "bool" в операции
 C:\Users\dstep\source\repos\aisd2\.vs\аисд2\Source.cpp(70,7): warning C4804: <=: небезопасное использование типа "bool" в операции
 C:\Users\dstep\source\repos\aisd2\.vs\аисд2\Source.cpp(146,18): error C3848: выражение с типом "bin_image" потеряет некоторые квалификаторы const или volatile при вызове "type &bin_image<type>::operator ()(int,int) const"
 C:\Users\dstep\source\repos\aisd2\.vs\аисд2\Source.cpp(146,18): message : "A": объявление функции должно быть доступно, так как ни один из аргументов не зависит от параметра шаблона
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\Source.cpp(165,14): error C2760: синтаксическая ошибка: непредвиденный токен "<"; требуется "объявление"
+C:\Users\dstep\source\repos\aisd2\.vs\аисд2\Source.cpp(171,40): error C2760: синтаксическая ошибка: непредвиденный токен ")"; требуется "выражение"
   Создание кода...
