@@ -1,9 +1,5 @@
 #pragma once
-class errors
-{
-};
 
-#include "bin_image.h"
 #include "stdio.h"
 #include <stdlib.h>
 #include <string>

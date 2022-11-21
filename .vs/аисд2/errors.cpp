@@ -1,3 +1,4 @@
+#pragma once 
 #include "errors.h"
 
 error::error(const char* message)

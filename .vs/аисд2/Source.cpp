@@ -1,3 +1,4 @@
+ï»¿#pragma once 
 #include "bin_image.h"
 #include "stdio.h"
 #include <stdlib.h>
@@ -21,8 +22,8 @@ int get_key()
 
 int menu_1()
 {
-	std::cout << "Âûáåðèòå, êàê âû õîòèòå ïðîäîëæèòü ðàáîòó:\n";
-	std::cout << "Èíâåðòèðîâàòü èçîáðàæåíèå: Enter\nÑëîæèòü ñ äðóãèì èçîáðàæåíèåì: 1\nÓìíîæèòü íà äðóãîå èçîáðàæåíèå: 2\nÑëîæèòü ñ áóëåâñêèì çíà÷åíèåì: 3\nÓìíîæèòü íà áóëåâñêîå çíà÷åíèå: 4\nÂû÷èñëèòü êîýôôèöèåíò çàïîëíåíèÿ èçîáðàæåíèÿ: 5\nÂûõîä èç ïðîã-ìû: Esc\n";
+	std::cout << "Ð’Ñ‹Ð±ÐµÑ€Ð¸Ñ‚Ðµ, ÐºÐ°Ðº Ð²Ñ‹ Ñ…Ð¾Ñ‚Ð¸Ñ‚Ðµ Ð¿Ñ€Ð¾Ð´Ð¾Ð»Ð¶Ð¸Ñ‚ÑŒ Ñ€Ð°Ð±Ð¾Ñ‚Ñƒ:\n";
+	std::cout << "Ð˜Ð½Ð²ÐµÑ€Ñ‚Ð¸Ñ€Ð¾Ð²Ð°Ñ‚ÑŒ Ð¸Ð·Ð¾Ð±Ñ€Ð°Ð¶ÐµÐ½Ð¸Ðµ: Enter\nÐ¡Ð»Ð¾Ð¶Ð¸Ñ‚ÑŒ Ñ Ð´Ñ€ÑƒÐ³Ð¸Ð¼ Ð¸Ð·Ð¾Ð±Ñ€Ð°Ð¶ÐµÐ½Ð¸ÐµÐ¼: 1\nÐ£Ð¼Ð½Ð¾Ð¶Ð¸Ñ‚ÑŒ Ð½Ð° Ð´Ñ€ÑƒÐ³Ð¾Ðµ Ð¸Ð·Ð¾Ð±Ñ€Ð°Ð¶ÐµÐ½Ð¸Ðµ: 2\nÐ¡Ð»Ð¾Ð¶Ð¸Ñ‚ÑŒ Ñ Ð±ÑƒÐ»ÐµÐ²ÑÐºÐ¸Ð¼ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸ÐµÐ¼: 3\nÐ£Ð¼Ð½Ð¾Ð¶Ð¸Ñ‚ÑŒ Ð½Ð° Ð±ÑƒÐ»ÐµÐ²ÑÐºÐ¾Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ: 4\nÐ’Ñ‹Ñ‡Ð¸ÑÐ»Ð¸Ñ‚ÑŒ ÐºÐ¾ÑÑ„Ñ„Ð¸Ñ†Ð¸ÐµÐ½Ñ‚ Ð·Ð°Ð¿Ð¾Ð»Ð½ÐµÐ½Ð¸Ñ Ð¸Ð·Ð¾Ð±Ñ€Ð°Ð¶ÐµÐ½Ð¸Ñ: 5\nÐ’Ñ‹Ñ…Ð¾Ð´ Ð¸Ð· Ð¿Ñ€Ð¾Ð³-Ð¼Ñ‹: Esc\n";
 	while (true)
 	{
 		int key = get_key();
@@ -32,7 +33,7 @@ int menu_1()
 
 int menu_2()
 {
-	std::cout << "Âåðíóòüñÿ: Enter\nÂûõîä èç ïðîã-ìû: Esc\n";
+	std::cout << "Ð’ÐµÑ€Ð½ÑƒÑ‚ÑŒÑÑ: Enter\nÐ’Ñ‹Ñ…Ð¾Ð´ Ð¸Ð· Ð¿Ñ€Ð¾Ð³-Ð¼Ñ‹: Esc\n";
 	while (true)
 	{
 		int key = get_key();
@@ -48,9 +49,9 @@ int check() {
 		{
 			std::cin.clear();
 			while (std::cin.get() != '\n');
-			std::cout << "Íåêîððåêòíîå çíà÷åíèå, ïîâòîðèòå ââîä\n";
+			std::cout << "ÐÐµÐºÐ¾Ñ€Ñ€ÐµÐºÑ‚Ð½Ð¾Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ, Ð¿Ð¾Ð²Ñ‚Ð¾Ñ€Ð¸Ñ‚Ðµ Ð²Ð²Ð¾Ð´\n";
 		}
-		if (number <= 0) std::cout << "Íåêîððåêòíîå çíà÷åíèå, ïîâòîðèòå ââîä\n";
+		if (number <= 0) std::cout << "ÐÐµÐºÐ¾Ñ€Ñ€ÐµÐºÑ‚Ð½Ð¾Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ, Ð¿Ð¾Ð²Ñ‚Ð¾Ñ€Ð¸Ñ‚Ðµ Ð²Ð²Ð¾Ð´\n";
 
 	}
 
@@ -59,21 +60,16 @@ int check() {
 
 bool check_bool() {
 	bool number = FALSE;
-	while (number <= 0)
-	{
-		while (!(std::cin >> number) || (std::cin.peek() != '\n'))
-		{
-			std::cin.clear();
-			while (std::cin.get() != '\n');
-			std::cout << "Íåêîððåêòíîå çíà÷åíèå, ïîâòîðèòå ââîä\n";
-		}
-		if (number <= 0) std::cout << "Íåêîððåêòíîå çíà÷åíèå, ïîâòîðèòå ââîä\n";
 
+	while (!(std::cin >> number) || (std::cin.peek() != '\n'))
+	{
+		std::cin.clear();
+		while (std::cin.get() != '\n');
+		std::cout << "ÐÐµÐºÐ¾Ñ€Ñ€ÐµÐºÑ‚Ð½Ð¾Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ, Ð¿Ð¾Ð²Ñ‚Ð¾Ñ€Ð¸Ñ‚Ðµ Ð²Ð²Ð¾Ð´\n";
 	}
 
 	return number;
 }
-
 double check_double() {
 	double number = 0;
 	while (number <= 0)
@@ -82,17 +78,18 @@ double check_double() {
 		{
 			std::cin.clear();
 			while (std::cin.get() != '\n');
-			std::cout << "Íåêîððåêòíîå çíà÷åíèå, ïîâòîðèòå ââîä\n";
+			std::cout << "ÐÐµÐºÐ¾Ñ€Ñ€ÐµÐºÑ‚Ð½Ð¾Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ, Ð¿Ð¾Ð²Ñ‚Ð¾Ñ€Ð¸Ñ‚Ðµ Ð²Ð²Ð¾Ð´\n";
 		}
-		if (number <= 0) std::cout << "Íåêîððåêòíîå çíà÷åíèå, ïîâòîðèòå ââîä\n";
+		if (number <= 0) std::cout << "ÐÐµÐºÐ¾Ñ€Ñ€ÐµÐºÑ‚Ð½Ð¾Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ, Ð¿Ð¾Ð²Ñ‚Ð¾Ñ€Ð¸Ñ‚Ðµ Ð²Ð²Ð¾Ð´\n";
 
 	}
 
 	return number;
 }
+
 template<typename type>
 bin_image<type> create_image() {
-	std::cout << "\nÂâåäèòå ðàçìåðû èçîáðàæåíèÿ(äëèíà, øèðèíà)\n";
+	std::cout << "\nÐ’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ€Ð°Ð·Ð¼ÐµÑ€Ñ‹ Ð¸Ð·Ð¾Ð±Ñ€Ð°Ð¶ÐµÐ½Ð¸Ñ(Ð´Ð»Ð¸Ð½Ð°, ÑˆÐ¸Ñ€Ð¸Ð½Ð°)\n";
 	int length, width;
 	length = check();
 	width = check();
@@ -103,7 +100,7 @@ bin_image<type> create_image() {
 	catch (error programm_error) {
 		programm_error.print();
 		while (true) {
-			std::cout << "\nÂâåäèòå ðàçìåðû èçîáðàæåíèÿ(äëèíà, øèðèíà)\n";
+			std::cout << "\nÐ’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ€Ð°Ð·Ð¼ÐµÑ€Ñ‹ Ð¸Ð·Ð¾Ð±Ñ€Ð°Ð¶ÐµÐ½Ð¸Ñ(Ð´Ð»Ð¸Ð½Ð°, ÑˆÐ¸Ñ€Ð¸Ð½Ð°)\n";
 			length = check();
 			width = check();
 			try {
@@ -119,31 +116,28 @@ bin_image<type> create_image() {
 template<typename type>
 void create_circle(double radios, int x, int y, bin_image<type>& A) {
 	if (radios < 0) { throw error("Invalid radios value"); }
-	for (int j = 0; j < A.get_width(); j++) { // ïðîâåðêà çà âûõîä çà ãðàíèöû ïî âåðòèêàëè
+
+	for (int j = 0; j < A.get_width(); j++) { // Ð¿Ñ€Ð¾Ð²ÐµÑ€ÐºÐ° Ð·Ð° Ð²Ñ‹Ñ…Ð¾Ð´ Ð·Ð° Ð³Ñ€Ð°Ð½Ð¸Ñ†Ñ‹ Ð¿Ð¾ Ð²ÐµÑ€Ñ‚Ð¸ÐºÐ°Ð»Ð¸
 		int i = -1;
-		double a = sqrt((x - i) * (x - i) + (y - j) * (y - j));
+		double a = sqrt((y - i) * (y - i) + (x - j) * (x - j));
 		if (a <= radios) { throw error("Going beyond the boundaries of the image"); }
 		i = A.get_length();
 		a = sqrt((x - i) * (x - i) + (y - j) * (y - j));
 		if (a <= radios) { throw error("Going beyond the boundaries of the image"); }
 	}
 
-	for (int j = 0; j < A.get_length(); j++) { // ïðîâåðêà çà âûõîä çà ãðàíèöû ïî ãîðèçîíòàëè
-		int i = -1;
-		double a = sqrt((x - i) * (x - i) + (y - j) * (y - j));
+	for (int i = 0; i < A.get_length(); i++) { // Ð¿Ñ€Ð¾Ð²ÐµÑ€ÐºÐ° Ð·Ð° Ð²Ñ‹Ñ…Ð¾Ð´ Ð·Ð° Ð³Ñ€Ð°Ð½Ð¸Ñ†Ñ‹ Ð¿Ð¾ Ð³Ð¾Ñ€Ð¸Ð·Ð¾Ð½Ñ‚Ð°Ð»Ð¸
+		int j = -1;
+		double a = sqrt((y - i) * (y - i) + (x - j) * (x - j));
 		if (a <= radios) { throw error("Going beyond the boundaries of the image"); }
-		i = A.get_width();
+		j = A.get_width();
 		a = sqrt((x - i) * (x - i) + (y - j) * (y - j));
 		if (a <= radios) { throw error("Going beyond the boundaries of the image"); }
 	}
 
-	int center_x = A.get_length() / 2;
-	int center_y = A.get_width() / 2;
-	x = x + center_x;
-	y = center_y - y;
 	for (int i = 0; i < A.get_length(); i++) {
 		for (int j = 0; j < A.get_width(); j++) {
-			bool& item = A(i, j);
+			type& item = A(i, j);
 			double a = sqrt((y - i) * (y - i) + (x - j) * (x - j));
 			if (a <= radios) {
 				item = true;
@@ -156,28 +150,25 @@ void create_circle(double radios, int x, int y, bin_image<type>& A) {
 
 template<typename type>
 int main_type() {
-	SetConsoleCP(1251);
-	SetConsoleOutputCP(1251);
-	setlocale(LC_ALL, "RUS");
+
 	while (true) {
 		system("cls");
-		std::cout << "\nÝòî ïðîãðàììà ïî ðàáîòå ñ áèíàðíûìè èçîáðàæåíèÿìè îêðóæíîñòè\n";
+		std::cout << "\nÐ­Ñ‚Ð¾ Ð¿Ñ€Ð¾Ð³Ñ€Ð°Ð¼Ð¼Ð° Ð¿Ð¾ Ñ€Ð°Ð±Ð¾Ñ‚Ðµ Ñ Ð±Ð¸Ð½Ð°Ñ€Ð½Ñ‹Ð¼Ð¸ Ð¸Ð·Ð¾Ð±Ñ€Ð°Ð¶ÐµÐ½Ð¸ÑÐ¼Ð¸ Ð¾ÐºÑ€ÑƒÐ¶Ð½Ð¾ÑÑ‚Ð¸\n";
 		bin_image<type> A = create_image<type>();
-		std::cout << "\nÂâåäèòå ðàäèóñ è êîîðäèíàòû öåíòðà(õ,ó) îêðóæíîñòè\n";
+		std::cout << "\nÐ’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ€Ð°Ð´Ð¸ÑƒÑ Ð¸ ÐºÐ¾Ð¾Ñ€Ð´Ð¸Ð½Ð°Ñ‚Ñ‹ Ñ†ÐµÐ½Ñ‚Ñ€Ð°(Ñ…,Ñƒ) Ð¾ÐºÑ€ÑƒÐ¶Ð½Ð¾ÑÑ‚Ð¸\n";
 		double R = check_double();
 		int x = check(); int y = check();
-		std::cin >> R >> x >> y;
 		try {
-			create_circle<type>(R, x, y, A<type>);
+			create_circle<type>(R, x, y, A);
 		}
 		catch (error programm_error) {
 			programm_error.print();
 			while (true) {
-				std::cout << "Íåêîððåêòíûå êîîðäèíàòû öåíòðà èëè ðàäèóñ ââåäèòå åùå ðàç: R (õ,ó)\n";
+				std::cout << "ÐÐµÐºÐ¾Ñ€Ñ€ÐµÐºÑ‚Ð½Ñ‹Ðµ ÐºÐ¾Ð¾Ñ€Ð´Ð¸Ð½Ð°Ñ‚Ñ‹ Ñ†ÐµÐ½Ñ‚Ñ€Ð° Ð¸Ð»Ð¸ Ñ€Ð°Ð´Ð¸ÑƒÑ Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐµÑ‰Ðµ Ñ€Ð°Ð·: R (Ñ…,Ñƒ)\n";
 				R = check_double();
 				x = check(); y = check();
 				try {
-					create_circle<type>(R, x, y, A<type>);
+					create_circle<type>(R, x, y, A);
 					break;
 				}
 				catch (error programm_error) {
@@ -189,17 +180,17 @@ int main_type() {
 			std::cin.clear();
 			system("cls");
 			std::cout << A;
-			std::cout << "\nÎêðóæíîñòü ðàäèóñà R=" << R << " ñ öåíòðîì â òî÷êå Î" << "(" << x << ";" << y << ")\n";
+			std::cout << "\nÐžÐºÑ€ÑƒÐ¶Ð½Ð¾ÑÑ‚ÑŒ Ñ€Ð°Ð´Ð¸ÑƒÑÐ° R=" << R << " Ñ Ñ†ÐµÐ½Ñ‚Ñ€Ð¾Ð¼ Ð² Ñ‚Ð¾Ñ‡ÐºÐµ Ðž" << "(" << x << ";" << y << ")\n";
 			int m1 = menu_1();
-			//âûõîä èç ïðîãðàììû
+			//Ð²Ñ‹Ñ…Ð¾Ð´ Ð¸Ð· Ð¿Ñ€Ð¾Ð³Ñ€Ð°Ð¼Ð¼Ñ‹
 			if (m1 == 27) return 0;
-			//èíòâåðòèðîâàòü
+			//Ð¸Ð½Ñ‚Ð²ÐµÑ€Ñ‚Ð¸Ñ€Ð¾Ð²Ð°Ñ‚ÑŒ
 			if (m1 == 13) {
-				A<type> = !A<type>;
+				A = !A;
 				while (true) {
 					system("cls");
-					std::cout << "Èíâåðòèðîâàííîå èçîáðàæåíèå:\n";
-					std::cout << A<type>;
+					std::cout << "Ð˜Ð½Ð²ÐµÑ€Ñ‚Ð¸Ñ€Ð¾Ð²Ð°Ð½Ð½Ð¾Ðµ Ð¸Ð·Ð¾Ð±Ñ€Ð°Ð¶ÐµÐ½Ð¸Ðµ:\n";
+					std::cout << A;
 					int m2 = menu_2();
 					if (m2 == 27) return 0;
 					if (m2 == 13) {
@@ -208,11 +199,11 @@ int main_type() {
 					}
 				}
 			}
-			// êîýô çàïîëíåíèÿ
+			// ÐºÐ¾ÑÑ„ Ð·Ð°Ð¿Ð¾Ð»Ð½ÐµÐ½Ð¸Ñ
 			if (m1 == 53) {
 				while (true) {
 					system("cls");
-					std::cout << "Êîýôôèöèåíò çàïîëíåíèÿ = " << A.fill_factor() << "\n";
+					std::cout << "ÐšÐ¾ÑÑ„Ñ„Ð¸Ñ†Ð¸ÐµÐ½Ñ‚ Ð·Ð°Ð¿Ð¾Ð»Ð½ÐµÐ½Ð¸Ñ = " << A.fill_factor() << "\n";
 					int m2 = menu_2();
 					if (m2 == 27) return 0;
 					if (m2 == 13) {
@@ -220,19 +211,19 @@ int main_type() {
 					}
 				}
 			}
-			// ñëîæèòü ñ èçîáð
+			// ÑÐ»Ð¾Ð¶Ð¸Ñ‚ÑŒ Ñ Ð¸Ð·Ð¾Ð±Ñ€
 			if (m1 == 49) {
-				bin_image B = create_image();
-				std::cout << "\nÂâåäèòå ðàäèóñ è êîîðäèíàòû öåíòðà(õ,ó) îêðóæíîñòè\n";
+				bin_image<type> B = create_image<type>();
+				std::cout << "\nÐ’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ€Ð°Ð´Ð¸ÑƒÑ Ð¸ ÐºÐ¾Ð¾Ñ€Ð´Ð¸Ð½Ð°Ñ‚Ñ‹ Ñ†ÐµÐ½Ñ‚Ñ€Ð°(Ñ…,Ñƒ) Ð¾ÐºÑ€ÑƒÐ¶Ð½Ð¾ÑÑ‚Ð¸\n";
 				double R2 = check_double();
 				int x2 = check(); int y2 = check();
 				try {
-					create_circle(R2, x2, y2, B);
+					create_circle<type>(R2, x2, y2, B);
 				}
 				catch (error programm_error) {
 					programm_error.print();
 					while (true) {
-						std::cout << "Íåêîððåêòíûå êîîðäèíàòû öåíòðà èëè ðàäèóñ ââåäèòå åùå ðàç: R (õ,ó)\n";
+						std::cout << "ÐÐµÐºÐ¾Ñ€Ñ€ÐµÐºÑ‚Ð½Ñ‹Ðµ ÐºÐ¾Ð¾Ñ€Ð´Ð¸Ð½Ð°Ñ‚Ñ‹ Ñ†ÐµÐ½Ñ‚Ñ€Ð° Ð¸Ð»Ð¸ Ñ€Ð°Ð´Ð¸ÑƒÑ Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐµÑ‰Ðµ Ñ€Ð°Ð·: R (Ñ…,Ñƒ)\n";
 						R2 = check_double();
 						x2 = check(); y2 = check();
 						try {
@@ -245,10 +236,10 @@ int main_type() {
 					}
 				}
 				try {
-					bin_image C = A + B;
+					bin_image<type> C = A + B;
 					while (true) {
 						system("cls");
-						std::cout << "Ïîëó÷åííîå èçîáðàæåíèå\n";
+						std::cout << "ÐŸÐ¾Ð»ÑƒÑ‡ÐµÐ½Ð½Ð¾Ðµ Ð¸Ð·Ð¾Ð±Ñ€Ð°Ð¶ÐµÐ½Ð¸Ðµ\n";
 						std::cout << C;
 						int m2 = menu_2();
 						if (m2 == 27) return 0;
@@ -259,17 +250,17 @@ int main_type() {
 					programm_error.print();
 					while (true) {
 						system("cls");
-						std::cout << "Íåâîçâîæíî ñëîæèòü 2 èçîáðàæåíèÿ\n";
+						std::cout << "ÐÐµÐ²Ð¾Ð·Ð²Ð¾Ð¶Ð½Ð¾ ÑÐ»Ð¾Ð¶Ð¸Ñ‚ÑŒ 2 Ð¸Ð·Ð¾Ð±Ñ€Ð°Ð¶ÐµÐ½Ð¸Ñ\n";
 						int m3 = menu_2();
 						if (m3 == 27) return 0;
 						if (m3 == 13) break;
 					}
 				}
 			}
-			//óìíîæèòü íà èçîáð
+			//ÑƒÐ¼Ð½Ð¾Ð¶Ð¸Ñ‚ÑŒ Ð½Ð° Ð¸Ð·Ð¾Ð±Ñ€
 			if (m1 == 50) {
-				bin_image<type> B = create_image();
-				std::cout << "\nÂâåäèòå ðàäèóñ è êîîðäèíàòû öåíòðà(õ,ó) îêðóæíîñòè\n";
+				bin_image<type> B = create_image<type>();
+				std::cout << "\nÐ’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ€Ð°Ð´Ð¸ÑƒÑ Ð¸ ÐºÐ¾Ð¾Ñ€Ð´Ð¸Ð½Ð°Ñ‚Ñ‹ Ñ†ÐµÐ½Ñ‚Ñ€Ð°(Ñ…,Ñƒ) Ð¾ÐºÑ€ÑƒÐ¶Ð½Ð¾ÑÑ‚Ð¸\n";
 				double R2 = check_double();
 				int x2 = check(); int y2 = check();
 				try {
@@ -278,7 +269,7 @@ int main_type() {
 				catch (error programm_error) {
 					programm_error.print();
 					while (true) {
-						std::cout << "Íåêîððåêòíûå êîîðäèíàòû öåíòðà èëè ðàäèóñ ââåäèòå åùå ðàç: R (õ,ó)\n";
+						std::cout << "ÐÐµÐºÐ¾Ñ€Ñ€ÐµÐºÑ‚Ð½Ñ‹Ðµ ÐºÐ¾Ð¾Ñ€Ð´Ð¸Ð½Ð°Ñ‚Ñ‹ Ñ†ÐµÐ½Ñ‚Ñ€Ð° Ð¸Ð»Ð¸ Ñ€Ð°Ð´Ð¸ÑƒÑ Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐµÑ‰Ðµ Ñ€Ð°Ð·: R (Ñ…,Ñƒ)\n";
 						R2 = check_double();
 						x2 = check(); y2 = check();
 						try {
@@ -291,10 +282,10 @@ int main_type() {
 					}
 				}
 				try {
-					bin_image C = A * B;
+					bin_image<type> C = A * B;
 					while (true) {
 						system("cls");
-						std::cout << "Ïîëó÷åííîå èçîáðàæåíèå\n";
+						std::cout << "ÐŸÐ¾Ð»ÑƒÑ‡ÐµÐ½Ð½Ð¾Ðµ Ð¸Ð·Ð¾Ð±Ñ€Ð°Ð¶ÐµÐ½Ð¸Ðµ\n";
 						std::cout << C;
 						int m2 = menu_2();
 						if (m2 == 27) return 0;
@@ -305,37 +296,37 @@ int main_type() {
 					programm_error.print();
 					while (true) {
 						system("cls");
-						std::cout << "Íåâîçâîæíî óìíîæèòü 2 èçîáðàæåíèÿ\n";
+						std::cout << "ÐÐµÐ²Ð¾Ð·Ð²Ð¾Ð¶Ð½Ð¾ ÑƒÐ¼Ð½Ð¾Ð¶Ð¸Ñ‚ÑŒ 2 Ð¸Ð·Ð¾Ð±Ñ€Ð°Ð¶ÐµÐ½Ð¸Ñ\n";
 						int m3 = menu_2();
 						if (m3 == 27) return 0;
 						if (m3 == 13) break;
 					}
 				}
 			}
-			// ñëîæèòü ñ áóëåâñêèì
+			// ÑÐ»Ð¾Ð¶Ð¸Ñ‚ÑŒ Ñ Ð±ÑƒÐ»ÐµÐ²ÑÐºÐ¸Ð¼
 			if (m1 == 51) {
 				system("cls");
-				std::cout << "Ââåäèòå áóëåâñêîå çíà÷åíèå:\n";
+				std::cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð±ÑƒÐ»ÐµÐ²ÑÐºÐ¾Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ:\n";
 				bool n = check_bool();
-				bin_image tmp = A + n;
+				bin_image<type> tmp = A + n;
 				while (true) {
 					system("cls");
-					std::cout << "Ïîëó÷åííîå èçîáðàæåíèå:\n";
+					std::cout << "ÐŸÐ¾Ð»ÑƒÑ‡ÐµÐ½Ð½Ð¾Ðµ Ð¸Ð·Ð¾Ð±Ñ€Ð°Ð¶ÐµÐ½Ð¸Ðµ:\n";
 					std::cout << tmp;
 					int m2 = menu_2();
 					if (m2 == 27) return 0;
 					if (m2 == 13) break;
 				}
 			}
-			// óìíîæèòü íà áóëåâñêîå
+			// ÑƒÐ¼Ð½Ð¾Ð¶Ð¸Ñ‚ÑŒ Ð½Ð° Ð±ÑƒÐ»ÐµÐ²ÑÐºÐ¾Ðµ
 			if (m1 == 52) {
 				system("cls");
-				std::cout << "Ââåäèòå áóëåâñêîå çíà÷åíèå:\n";
+				std::cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð±ÑƒÐ»ÐµÐ²ÑÐºÐ¾Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ:\n";
 				bool n = check_bool();
-				bin_image tmp = n * A;
+				bin_image<type> tmp = n * A;
 				while (true) {
 					system("cls");
-					std::cout << "Ïîëó÷åííîå èçîáðàæåíèå:\n";
+					std::cout << "ÐŸÐ¾Ð»ÑƒÑ‡ÐµÐ½Ð½Ð¾Ðµ Ð¸Ð·Ð¾Ð±Ñ€Ð°Ð¶ÐµÐ½Ð¸Ðµ:\n";
 					std::cout << tmp;
 					int m2 = menu_2();
 					if (m2 == 27) return 0;
@@ -349,13 +340,17 @@ int main_type() {
 
 int main() {
 	{
+		SetConsoleCP(1251);
+		SetConsoleOutputCP(1251);
+		setlocale(LC_ALL, "RUS");
 		while (true) {
-			std::cout << "Choose type:";
-			std::cout << "[1] - short";
-			std::cout << "[2] - float";
-			std::cout << "[3] - bool";
-			std::cout << "[4] - char" ;
-			std::cout << "[ESC] - Exit";
+			system("cls");
+			std::cout << "Ð’Ñ‹Ð±ÐµÑ€Ð¸Ñ‚Ðµ Ñ‚Ð¸Ð¿:\n";
+			std::cout << "[1] - short\n" ;
+			std::cout << "[2] - float\n";
+			std::cout << "[3] - bool\n";
+			std::cout << "[4] - char\n";
+			std::cout << "[ESC] - Exit\n";
 
 			int m = get_key();
 
@@ -374,9 +369,7 @@ int main() {
 				main_type<char>();
 				break;
 			case 27:
-				return EXIT_SUCCESS;
-			default:
-				system("clear");
+				return 0;
 				break;
 			}
 		}

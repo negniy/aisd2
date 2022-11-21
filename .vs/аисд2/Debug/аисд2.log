@@ -1,62 +1,70 @@
-﻿  bin_image.cpp
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.h(42,2): error C2953: bin_image: шаблон класса уже определен
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.h(21): message : см. объявление "bin_image"
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.cpp(5,1): error C2244: bin_image::get_length: не удается сопоставить определение функции существующему объявлению
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.cpp(4): message : см. объявление "bin_image::get_length"
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.cpp(5,1): message : определение
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.cpp(5,1): message : 'int bin_image::get_length(void) const'
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.cpp(5,1): message : существующие объявления
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.cpp(5,1): message : 'int bin_image<type>::get_length(void) const'
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.cpp(11,1): error C2244: bin_image::get_width: не удается сопоставить определение функции существующему объявлению
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.cpp(10): message : см. объявление "bin_image::get_width"
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.cpp(11,1): message : определение
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.cpp(11,1): message : 'int bin_image::get_width(void) const'
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.cpp(11,1): message : существующие объявления
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.cpp(11,1): message : 'int bin_image<type>::get_width(void) const'
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.cpp(16,1): error C2244: bin_image::bin_image: не удается сопоставить определение функции существующему объявлению
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.cpp(16): message : см. объявление "bin_image::bin_image"
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.cpp(16,1): message : определение
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.cpp(16,1): message : 'bin_image::bin_image(int,int)'
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.cpp(16,1): message : существующие объявления
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.cpp(16,1): message : 'bin_image<type>::bin_image(const bin_image<type> &)'
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.cpp(16,1): message : 'bin_image<type>::bin_image(int,int)'
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.cpp(26,1): error C2244: bin_image::operator (): не удается сопоставить определение функции существующему объявлению
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.cpp(26): message : см. объявление "bin_image::operator ()"
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.cpp(26,1): message : определение
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.cpp(26,1): message : 'type &bin_image::operator ()(int,int) const'
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.cpp(26,1): message : существующие объявления
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.cpp(26,1): message : 'type &bin_image<type>::operator ()(int,int) const'
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.cpp(108,1): error C2244: bin_image::operator !: не удается сопоставить определение функции существующему объявлению
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.cpp(108): message : см. объявление "bin_image::operator !"
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.cpp(108,1): message : определение
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.cpp(108,1): message : 'bin_image &bin_image::operator !(void)'
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.cpp(108,1): message : существующие объявления
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.cpp(108,1): message : 'bin_image<type> &bin_image<type>::operator !(void)'
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.cpp(123,1): error C2244: bin_image::fill_factor: не удается сопоставить определение функции существующему объявлению
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.cpp(123): message : см. объявление "bin_image::fill_factor"
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.cpp(123,1): message : определение
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.cpp(123,1): message : 'double bin_image::fill_factor(void) const'
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.cpp(123,1): message : существующие объявления
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.cpp(123,1): message : 'double bin_image<type>::fill_factor(void) const'
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.cpp(136,1): error C2244: bin_image::~bin_image: не удается сопоставить определение функции существующему объявлению
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.cpp(136): message : см. объявление "bin_image::~bin_image"
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.cpp(136,1): message : определение
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.cpp(136,1): message : 'bin_image::~bin_image(void)'
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.cpp(136,1): message : существующие объявления
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.cpp(136,1): message : 'bin_image<type>::~bin_image(void)'
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.cpp(146,1): error C2244: bin_image::bin_image: не удается сопоставить определение функции существующему объявлению
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.cpp(146): message : см. объявление "bin_image::bin_image"
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.cpp(146,1): message : определение
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.cpp(146,1): message : 'bin_image::bin_image(const bin_image &)'
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.cpp(146,1): message : существующие объявления
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.cpp(146,1): message : 'bin_image<type>::bin_image(const bin_image<type> &)'
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.cpp(146,1): message : 'bin_image<type>::bin_image(int,int)'
-  Source.cpp
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.h(42,2): error C2953: bin_image: шаблон класса уже определен
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.h(21): message : см. объявление "bin_image"
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\Source.cpp(62,9): warning C4804: <=: небезопасное использование типа "bool" в операции
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\Source.cpp(70,7): warning C4804: <=: небезопасное использование типа "bool" в операции
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\Source.cpp(146,18): error C3848: выражение с типом "bin_image" потеряет некоторые квалификаторы const или volatile при вызове "type &bin_image<type>::operator ()(int,int) const"
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\Source.cpp(146,18): message : "A": объявление функции должно быть доступно, так как ни один из аргументов не зависит от параметра шаблона
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\Source.cpp(171,40): error C2760: синтаксическая ошибка: непредвиденный токен ")"; требуется "выражение"
-  Создание кода...
+﻿  Source.cpp
+C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.h(44,29): warning C4805: ==: небезопасное смешение типа "type" и типа "bool" в операции
+          with
+          [
+              type=char
+          ]
+C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.h(40): message : во время компиляции функции-члена класс шаблон "std::ostream &operator <<(std::ostream &,const bin_image<type> &)"
+          with
+          [
+              type=char
+          ]
+C:\Users\dstep\source\repos\aisd2\.vs\аисд2\Source.cpp(184): message : выполняется компиляция ссылки на экземпляр шаблон функции "std::ostream &operator <<(std::ostream &,const bin_image<type> &)"
+          with
+          [
+              type=char
+          ]
+C:\Users\dstep\source\repos\aisd2\.vs\аисд2\Source.cpp(157): message : выполняется компиляция ссылки на экземпляр класс шаблон функции "bin_image<type>"
+          with
+          [
+              type=char
+          ]
+C:\Users\dstep\source\repos\aisd2\.vs\аисд2\Source.cpp(371): message : выполняется компиляция ссылки на экземпляр шаблон функции "int main_type<char>(void)"
+C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.h(43,24): warning C4805: ==: небезопасное смешение типа "type" и типа "bool" в операции
+          with
+          [
+              type=float
+          ]
+C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.h(40): message : во время компиляции функции-члена класс шаблон "std::ostream &operator <<(std::ostream &,const bin_image<type> &)"
+          with
+          [
+              type=float
+          ]
+C:\Users\dstep\source\repos\aisd2\.vs\аисд2\Source.cpp(184): message : выполняется компиляция ссылки на экземпляр шаблон функции "std::ostream &operator <<(std::ostream &,const bin_image<type> &)"
+          with
+          [
+              type=float
+          ]
+C:\Users\dstep\source\repos\aisd2\.vs\аисд2\Source.cpp(157): message : выполняется компиляция ссылки на экземпляр класс шаблон функции "bin_image<type>"
+          with
+          [
+              type=float
+          ]
+C:\Users\dstep\source\repos\aisd2\.vs\аисд2\Source.cpp(365): message : выполняется компиляция ссылки на экземпляр шаблон функции "int main_type<float>(void)"
+C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.h(44,24): warning C4805: ==: небезопасное смешение типа "type" и типа "bool" в операции
+          with
+          [
+              type=float
+          ]
+C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.h(44,29): warning C4805: ==: небезопасное смешение типа "type" и типа "bool" в операции
+          with
+          [
+              type=short
+          ]
+C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.h(40): message : во время компиляции функции-члена класс шаблон "std::ostream &operator <<(std::ostream &,const bin_image<type> &)"
+          with
+          [
+              type=short
+          ]
+C:\Users\dstep\source\repos\aisd2\.vs\аисд2\Source.cpp(184): message : выполняется компиляция ссылки на экземпляр шаблон функции "std::ostream &operator <<(std::ostream &,const bin_image<type> &)"
+          with
+          [
+              type=short
+          ]
+C:\Users\dstep\source\repos\aisd2\.vs\аисд2\Source.cpp(157): message : выполняется компиляция ссылки на экземпляр класс шаблон функции "bin_image<type>"
+          with
+          [
+              type=short
+          ]
+C:\Users\dstep\source\repos\aisd2\.vs\аисд2\Source.cpp(362): message : выполняется компиляция ссылки на экземпляр шаблон функции "int main_type<short>(void)"
+  аисд2.vcxproj -> C:\Users\dstep\source\repos\aisd2\.vs\аисд2\Debug\аисд2.exe
