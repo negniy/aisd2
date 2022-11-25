@@ -9,17 +9,17 @@ C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.h(40): message : во 
           [
               type=char
           ]
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\Source.cpp(184): message : выполняется компиляция ссылки на экземпляр шаблон функции "std::ostream &operator <<(std::ostream &,const bin_image<type> &)"
+C:\Users\dstep\source\repos\aisd2\.vs\аисд2\Source.cpp(180): message : выполняется компиляция ссылки на экземпляр шаблон функции "std::ostream &operator <<(std::ostream &,const bin_image<type> &)"
           with
           [
               type=char
           ]
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\Source.cpp(157): message : выполняется компиляция ссылки на экземпляр класс шаблон функции "bin_image<type>"
+C:\Users\dstep\source\repos\aisd2\.vs\аисд2\Source.cpp(155): message : выполняется компиляция ссылки на экземпляр класс шаблон функции "bin_image<type>"
           with
           [
               type=char
           ]
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\Source.cpp(371): message : выполняется компиляция ссылки на экземпляр шаблон функции "int main_type<char>(void)"
+C:\Users\dstep\source\repos\aisd2\.vs\аисд2\Source.cpp(367): message : выполняется компиляция ссылки на экземпляр шаблон функции "int main_type<char>(void)"
 C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.h(43,24): warning C4805: ==: небезопасное смешение типа "type" и типа "bool" в операции
           with
           [
@@ -30,17 +30,17 @@ C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.h(40): message : во 
           [
               type=float
           ]
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\Source.cpp(184): message : выполняется компиляция ссылки на экземпляр шаблон функции "std::ostream &operator <<(std::ostream &,const bin_image<type> &)"
+C:\Users\dstep\source\repos\aisd2\.vs\аисд2\Source.cpp(180): message : выполняется компиляция ссылки на экземпляр шаблон функции "std::ostream &operator <<(std::ostream &,const bin_image<type> &)"
           with
           [
               type=float
           ]
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\Source.cpp(157): message : выполняется компиляция ссылки на экземпляр класс шаблон функции "bin_image<type>"
+C:\Users\dstep\source\repos\aisd2\.vs\аисд2\Source.cpp(155): message : выполняется компиляция ссылки на экземпляр класс шаблон функции "bin_image<type>"
           with
           [
               type=float
           ]
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\Source.cpp(365): message : выполняется компиляция ссылки на экземпляр шаблон функции "int main_type<float>(void)"
+C:\Users\dstep\source\repos\aisd2\.vs\аисд2\Source.cpp(361): message : выполняется компиляция ссылки на экземпляр шаблон функции "int main_type<float>(void)"
 C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.h(44,24): warning C4805: ==: небезопасное смешение типа "type" и типа "bool" в операции
           with
           [
@@ -56,15 +56,15 @@ C:\Users\dstep\source\repos\aisd2\.vs\аисд2\bin_image.h(40): message : во 
           [
               type=short
           ]
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\Source.cpp(184): message : выполняется компиляция ссылки на экземпляр шаблон функции "std::ostream &operator <<(std::ostream &,const bin_image<type> &)"
+C:\Users\dstep\source\repos\aisd2\.vs\аисд2\Source.cpp(180): message : выполняется компиляция ссылки на экземпляр шаблон функции "std::ostream &operator <<(std::ostream &,const bin_image<type> &)"
           with
           [
               type=short
           ]
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\Source.cpp(157): message : выполняется компиляция ссылки на экземпляр класс шаблон функции "bin_image<type>"
+C:\Users\dstep\source\repos\aisd2\.vs\аисд2\Source.cpp(155): message : выполняется компиляция ссылки на экземпляр класс шаблон функции "bin_image<type>"
           with
           [
               type=short
           ]
-C:\Users\dstep\source\repos\aisd2\.vs\аисд2\Source.cpp(362): message : выполняется компиляция ссылки на экземпляр шаблон функции "int main_type<short>(void)"
+C:\Users\dstep\source\repos\aisd2\.vs\аисд2\Source.cpp(358): message : выполняется компиляция ссылки на экземпляр шаблон функции "int main_type<short>(void)"
   аисд2.vcxproj -> C:\Users\dstep\source\repos\aisd2\.vs\аисд2\Debug\аисд2.exe

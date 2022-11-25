@@ -42,8 +42,8 @@ int menu_2()
 }
 
 int check() {
-	int number = 0;
-	while (number <= 0)
+	int number = -1;
+	while (number < 0)
 	{
 		while (!(std::cin >> number) || (std::cin.peek() != '\n'))
 		{
@@ -51,7 +51,7 @@ int check() {
 			while (std::cin.get() != '\n');
 			std::cout << "Некорректное значение, повторите ввод\n";
 		}
-		if (number <= 0) std::cout << "Некорректное значение, повторите ввод\n";
+		if (number < 0) std::cout << "Некорректное значение, повторите ввод\n";
 
 	}
 
@@ -81,9 +81,7 @@ double check_double() {
 			std::cout << "Некорректное значение, повторите ввод\n";
 		}
 		if (number <= 0) std::cout << "Некорректное значение, повторите ввод\n";
-
 	}
-
 	return number;
 }
 
@@ -115,24 +113,24 @@ bin_image<type> create_image() {
 }
 template<typename type>
 void create_circle(double radios, int x, int y, bin_image<type>& A) {
-	if (radios < 0) { throw error("Invalid radios value"); }
+	if (radios < 0) { throw error("Invalid radios value\n"); }
 
 	for (int j = 0; j < A.get_width(); j++) { // проверка за выход за границы по вертикали
 		int i = -1;
 		double a = sqrt((y - i) * (y - i) + (x - j) * (x - j));
-		if (a <= radios) { throw error("Going beyond the boundaries of the image"); }
+		if (a <= radios) { throw error("Going beyond the boundaries of the image\n"); }
 		i = A.get_length();
 		a = sqrt((x - i) * (x - i) + (y - j) * (y - j));
-		if (a <= radios) { throw error("Going beyond the boundaries of the image"); }
+		if (a <= radios) { throw error("Going beyond the boundaries of the image\n"); }
 	}
 
 	for (int i = 0; i < A.get_length(); i++) { // проверка за выход за границы по горизонтали
 		int j = -1;
 		double a = sqrt((y - i) * (y - i) + (x - j) * (x - j));
-		if (a <= radios) { throw error("Going beyond the boundaries of the image"); }
+		if (a <= radios) { throw error("Going beyond the boundaries of the image\n"); }
 		j = A.get_width();
 		a = sqrt((x - i) * (x - i) + (y - j) * (y - j));
-		if (a <= radios) { throw error("Going beyond the boundaries of the image"); }
+		if (a <= radios) { throw error("Going beyond the boundaries of the image\n"); }
 	}
 
 	for (int i = 0; i < A.get_length(); i++) {
@@ -145,7 +143,7 @@ void create_circle(double radios, int x, int y, bin_image<type>& A) {
 			else { item = false; }
 		}
 	}
-	if (A.fill_factor() == 0) throw error("Empty image");
+	if (A.fill_factor() == 0) throw error("Empty image\n");
 }
 
 template<typename type>
